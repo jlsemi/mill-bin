@@ -15,7 +15,7 @@ setup(
     author="Leway Colin@JLSemi",
     author_email="colinlin@jlsemi.com",
     description=(
-        "Mill Bin is a fat JAR with all of its dependencies."
+        "Mill Binary is a fat JAR with all of its dependencies."
     ),
     license="Apache-2.0 License",
     keywords=[

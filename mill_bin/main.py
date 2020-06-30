@@ -21,7 +21,7 @@ def get_resource_name(name):
 def get_resource_string(name):
     return pkg_resources.resource_string(__name__, name)
 
-class Chisel3:
+class MILLBin:
     def create(self, args):
         jars_path = args.dest_path
         if not os.path.exists(jars_path):
@@ -35,7 +35,7 @@ def parse_args():
     # Global actions
     parser.add_argument(
         "--version",
-        help="Show the Chisel3 Jar version",
+        help="Show the Mill Binary version",
         action="version",
         version=__version__,
     )
@@ -56,7 +56,7 @@ def parse_args():
         return None
 
 def create(args):
-    sc = Chisel3()
+    sc = MILLBin()
     sc.create(args)
 
 def main():
