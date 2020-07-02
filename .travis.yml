@@ -3,6 +3,9 @@ language: python
 script:
   - make prepare
   - python setup.py bdist_wheel
+before_deploy:
+  - export FILE=$(ls dist/*.whl)
+  - echo "deploying $FILE to GitHub releases"
 deploy:
   - provider: pypi
     username: $PYPI_NAME
